@@ -1,0 +1,76 @@
+---
+import HeaderContact from "./HeaderContact.astro";
+import MailIcon from "../icons/MailIcon.astro";
+import CartIcon from "../icons/CartIcon.astro";
+import MessageIcon from "../icons/MessageIcon.astro";
+import SendIcon from "../icons/SendIcon.astro";
+import BackgroundContact from "./BackgroundContact.astro";
+import Phone from "../icons/Phone.astro";
+import SocialMedia from "./SocialMedia.astro";
+---
+
+<section
+    id="contact"
+    class="relative py-12 container mx-auto px-6 max-w-2xl relative z-10 bg-gradient-to-br from-white/5 to-white/2 rounded-2xl backdrop-blur-xl border border-white/10 shadow-2xl hover:shadow-indigo-500/20 transition-shadow duration-300"
+>
+    <HeaderContact />
+    <form class="space-y-6 relative">
+        <fieldset class="form-group">
+            <label
+                class="text-sm flex items-center gap-3 mb-2 font-medium text-gray-300"
+            >
+                <MailIcon />
+                Nombre
+            </label>
+            <input
+                type="text"
+                class="w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3
+                                   text-gray-300 placeholder-gray-500 focus:outline-none focus:border-indigo-400
+                                   focus:ring-1 focus:ring-indigo-500/30 transition-all duration-200"
+                placeholder="Ej: Juan Pérez"
+            />
+        </fieldset>
+
+        <fieldset class="form-group">
+            <label
+                class="flex gap-3 items-center mb-2 text-sm font-medium text-gray-300"
+            >
+                <span class="h-5 w-5 text-indigo-400">
+                    <CartIcon />
+                </span>
+                Email
+            </label>
+            <input
+                type="email"
+                class="w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3
+                                   text-gray-300 placeholder-gray-500 focus:outline-none focus:border-indigo-400
+                                   focus:ring-1 focus:ring-indigo-500/30 transition-all duration-200"
+                placeholder="tucorreo@ejemplo.com"
+            />
+        </fieldset>
+
+        <fieldset class="form-group">
+            <label
+                class="text-sm flex gap-3 items-center mb-2 font-medium text-gray-300"
+            >
+                <MessageIcon />
+                Mensaje
+            </label>
+            <textarea
+                class="w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3
+                                   text-gray-300 placeholder-gray-500 focus:outline-none focus:border-indigo-400
+                                   focus:ring-1 focus:ring-indigo-500/30 transition-all duration-200 h-32 resize-none"
+                placeholder="Escribe tu mensaje aquí..."></textarea>
+        </fieldset>
+
+        <button
+            type="submit"
+            class="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 text-white font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-indigo-500/30"
+        >
+            <SendIcon />
+            Enviar Mensaje
+        </button>
+    </form>
+    <SocialMedia />
+    <BackgroundContact />
+</section>
