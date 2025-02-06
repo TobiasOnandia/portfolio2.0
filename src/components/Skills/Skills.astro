@@ -1,0 +1,92 @@
+---
+import BackgroundSkills from "./BackgroundSkills.astro";
+import HTMLIcon from "../icons/HTMLIcon.astro";
+import CardSkills from "../Skills/CardSkills.astro";
+
+const skills = [
+    {
+        title: "Frontend",
+        skills: [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Astro",
+            "Framer Motion",
+        ],
+        icon: `    <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8 text-indigo-400"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+        >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+                d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+            ></path>
+            <path d="M4 8h16"></path>
+            <path d="M12 8v8"></path>
+        </svg>`,
+    },
+    {
+        title: "Backend",
+        skills: ["Express", "WebSockets", "Supabase", "REST API", "Node js"],
+    },
+    {
+        title: "Database",
+        skills: ["SQL", "Supabase", "Firebase "],
+    },
+    {
+        title: "Testing",
+        skills: ["Playwright", "Vitest"],
+    },
+    {
+        title: "DevOps",
+        skills: ["Docker", "GitHub Actions", "Vercel", "CI/CD", "Nginx"],
+    },
+    {
+        title: "UI/UX",
+        skills: [
+            "Figma",
+            "Shadcn/ui",
+            "Storybook",
+            "Radix UI",
+            "Responsive Design",
+            "WCAG",
+        ],
+    },
+];
+---
+
+<section id="skills" class="container px-6 mx-auto py-20 relative">
+    <article class="max-w-7xl mx-auto">
+        <header class="mb-16">
+            <h4
+                class="text-4xl font-bold bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent inline-block"
+            >
+                Arsenal Tecnológico
+            </h4>
+            <p class="mt-4 text-gray-400 text-balance max-w-2xl">
+                Dominio de herramientas modernas para crear soluciones
+                full-stack escalables y eficientes
+            </p>
+        </header>
+
+        <section
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative"
+        >
+            {
+                skills.map((skill) => (
+                    <CardSkills
+                        title={skill.title}
+                        skills={skill.skills}
+                        icon={skill.icon}
+                    />
+                ))
+            }
+        </section>
+    </article>
+    <BackgroundSkills />
+</section>
