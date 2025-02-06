@@ -1,0 +1,12 @@
+---
+import { projects } from "./data.js";
+import ProjectCard from "./Project.astro";
+import HeaderProjects from "./HeaderProjects.astro";
+---
+
+<section id="projects" class="py-20 relative container mx-auto px-6">
+    <HeaderProjects />
+    <article class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map((project) => <ProjectCard {...project} />)}
+    </article>
+</section>
