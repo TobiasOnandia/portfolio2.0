@@ -10,14 +10,13 @@ import File from "../components/icons/File.astro";
         <div class="space-y-6 md:space-y-8">
             {/* Encabezado principal con animación sutil */}
             <h1
-                class="text-5xl md:text-7xl font-bold tracking-tight leading-tight animate-[var(--animate-fade-in-up)]"
+                class="text-5xl flex flex-col md:text-7xl font-bold tracking-tight leading-tight animate-animate-fade-in-up"
             >
                 <span
                     class="bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent"
                 >
                     Hola, soy
                 </span>
-                <br />
                 <span
                     class="bg-gradient-to-r from-indigo-200 via-blue-300 to-indigo-400 bg-clip-text text-transparent"
                 >
@@ -25,24 +24,26 @@ import File from "../components/icons/File.astro";
                 </span>
             </h1>
 
-            {/* Subtítulo con efecto máquina de escribir */}
-            <div class="overflow-hidden">
-                <p
-                    class="text-2xl md:text-4xl font-medium text-gray-300 animate-slide-up delay-100"
+            <p
+                class="text-2xl md:text-4xl font-medium text-gray-300 animate-slide-up delay-100"
+            >
+                <span class="text-gray-400">Desarrollador Full Stack</span>
+            </p>
+            <p
+                class="text-2xl text-balance md:text-4xl font-medium text-gray-300 animate-slide-up delay-100"
+            >
+                <span class="text-indigo-400">especializado en</span>
+                <span
+                    class="w-fit bg-gradient-to-r from-purple-400 to-indigo-500 bg-clip-text text-transparent font-semibold border-b-2 border-indigo-500/30 animate-underline"
                 >
-                    <span class="text-gray-400">Desarrollador Full Stack</span>
-                    <br />
-                    <span class="text-indigo-400">especializado en</span>
-                    <span
-                        class="ml-2 bg-gradient-to-r from-purple-400 to-indigo-500 bg-clip-text text-transparent font-semibold border-b-2 border-indigo-500/30 animate-underline"
-                    >
-                        Next.js & TypeScript
-                    </span>
-                </p>
-            </div>
+                    Next.js & TypeScript
+                </span>
+            </p>
 
             {/* Badge disponibilidad con efecto neón */}
-            <div class="flex items-center gap-3 group">
+            <span
+                class="text-sm w-fit flex items-center gap-3 font-medium bg-gradient-to-r from-green-400/80 to-green-600/80 bg-clip-text text-transparent px-3 py-1.5 rounded-full bg-black/20 backdrop-blur-lg border border-green-400/20"
+            >
                 <span class="relative flex h-3 w-3">
                     <span
                         class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400/80 opacity-75"
@@ -51,12 +52,8 @@ import File from "../components/icons/File.astro";
                         class="relative inline-flex rounded-full h-3 w-3 bg-gradient-to-br from-green-400 to-green-600"
                     ></span>
                 </span>
-                <span
-                    class="text-sm font-medium bg-gradient-to-r from-green-400/80 to-green-600/80 bg-clip-text text-transparent px-3 py-1.5 rounded-full bg-black/20 backdrop-blur-lg border border-green-400/20"
-                >
-                    Disponible para trabajar
-                </span>
-            </div>
+                Disponible para trabajar
+            </span>
 
             {/* Botones con efecto hover glass */}
             <div class="flex flex-wrap gap-4 mt-8">
@@ -68,9 +65,11 @@ import File from "../components/icons/File.astro";
                        hover:border-indigo-400/30 transition-all
                        duration-300 text-sm font-medium group"
                 >
-                    <Laptop
-                        class="w-5 h-5 group-hover:text-indigo-400 transition-colors"
-                    />
+                    <span
+                        class="w-5 h-5 flex items-center group-hover:text-indigo-400 transition-colors"
+                    >
+                        <Laptop />
+                    </span>
                     <span>Proyectos</span>
                 </a>
                 <a
@@ -81,9 +80,11 @@ import File from "../components/icons/File.astro";
                        hover:border-indigo-400/30 transition-all
                        duration-300 text-sm font-medium group"
                 >
-                    <LinkedIn
-                        class="w-5 h-5 group-hover:text-indigo-400 transition-colors"
-                    />
+                    <span
+                        class="w-5 h-5 flex items-center group-hover:text-indigo-400 transition-colors"
+                    >
+                        <LinkedIn />
+                    </span>
                     <span>LinkedIn</span>
                 </a>
                 <a
@@ -94,22 +95,27 @@ import File from "../components/icons/File.astro";
                        hover:border-indigo-400/30 transition-all
                        duration-300 text-sm font-medium group"
                 >
-                    <GitHub
-                        class="w-5 h-5 group-hover:text-indigo-400 transition-colors"
-                    />
+                    <span
+                        class="w-5 h-5 flex items-center group-hover:text-indigo-400 transition-colors"
+                    >
+                        <GitHub />
+                    </span>
                     <span>GitHub</span>
                 </a>
                 <a
                     href="#cv"
+                    download=""
                     class="flex items-center gap-2 px-6 py-3 rounded-full
                        bg-white/5 backdrop-blur-sm border border-white/10
                        text-gray-300 hover:text-white hover:bg-white/10
                        hover:border-indigo-400/30 transition-all
                        duration-300 text-sm font-medium group"
                 >
-                    <File
-                        class="w-5 h-5 group-hover:text-indigo-400 transition-colors"
-                    />
+                    <span
+                        class="w-5 flex items-center h-5 group-hover:text-indigo-400 transition-colors"
+                    >
+                        <File />
+                    </span>
                     <span>Descargar CV</span>
                 </a>
             </div>
