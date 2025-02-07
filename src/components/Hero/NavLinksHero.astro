@@ -3,6 +3,7 @@ import Laptop from "@/components/icons/Laptop.astro";
 import LinkedIn from "@/components/icons/LinkedIn.astro";
 import GitHub from "@/components/icons/GitHub.astro";
 import File from "@/components/icons/File.astro";
+import CV from "../../../public/CV.pdf";
 ---
 
 <nav class="flex flex-wrap gap-4 mt-8">
@@ -53,7 +54,7 @@ import File from "@/components/icons/File.astro";
   </a>
   <a
     href="#cv"
-    download=""
+    download={CV}
     class="flex items-center gap-2 px-6 py-3 rounded-full
                    bg-white/5 backdrop-blur-sm border border-white/10
                    text-gray-300 hover:text-white hover:bg-white/10
