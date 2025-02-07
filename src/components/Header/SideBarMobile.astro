@@ -1,33 +1,32 @@
 ---
-import GitHub from "../icons/GitHub.astro";
-import SocialLinksHeader from "./SocialLinksHeader.astro";
-import NavLinksMobile from "./NavLinksMobile.astro";
+import SocialLinksHeader from "@/components/Header/SocialLinksHeader.astro";
+import NavLinksMobile from "@/components/Header/NavLinksMobile.astro";
 ---
 
 <aside class="flex flex-col h-full p-6">
-    <header class="flex justify-end mb-8">
-        <!-- Close Button -->
-        <button
-            id="closeMenu"
-            class="p-2 cursor-pointer rounded-lg hover:bg-white/10"
-        >
-            <svg
-                class="h-6 w-6 text-gray-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-        </button>
-    </header>
+  <header class="flex justify-end mb-8">
+    <!-- Close Button -->
+    <button
+      id="closeMenu"
+      class="p-2 cursor-pointer rounded-lg hover:bg-white/10"
+    >
+      <svg
+        class="h-6 w-6 text-gray-300"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </header>
 
-    <!-- Navigation Links -->
-    <NavLinksMobile />
-    <!-- Social Links -->
-    <SocialLinksHeader />
+  <!-- Navigation Links -->
+  <NavLinksMobile />
+  <!-- Social Links -->
+  <SocialLinksHeader />
 </aside>

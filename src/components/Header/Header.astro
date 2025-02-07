@@ -1,66 +1,63 @@
 ---
-import DesktopnNavigation from "../Header/DesktopNavigation.astro";
-import SideBarMobile from "../Header/SideBarMobile.astro";
-import XIcon from "../icons/Xicon.astro";
+import DesktopnNavigation from "@/components/Header/DesktopNavigation.astro";
+import SideBarMobile from "@/components/Header/SideBarMobile.astro";
+import XIcon from "@/components/icons/Xicon.astro";
 ---
 
 <header
-    class="sticky rounded-b-xl top-0 backdrop-blur-lg border-b border-white/10 z-50"
+  class="sticky rounded-b-xl top-0 backdrop-blur-lg border-b border-white/10 z-50"
 >
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a
-            href="#"
-            class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent"
-        >
-            T.O.
-        </a>
+  <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <a
+      href="#"
+      class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent"
+    >
+      T.O.
+    </a>
 
-        <button
-            id="menuButton"
-            class="md:hidden cursor-pointer p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10"
-        >
-            <XIcon />
-        </button>
-        <!-- Desktop Navigation -->
-        <DesktopnNavigation />
-        <!-- Mobile Sidebar -->
-        <div
-            id="mobileMenu"
-            class="fixed h-screen inset-y-0 right-0 w-64 bg-white/5 backdrop-blur-xl border-l border-white/10 transform translate-x-full transition-transform duration-300 md:hidden"
-        >
-            <SideBarMobile />
-        </div>
-    </nav>
+    <button
+      id="menuButton"
+      class="md:hidden cursor-pointer p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10"
+    >
+      <XIcon />
+    </button>
+    <!-- Desktop Navigation -->
+    <DesktopnNavigation />
+    <!-- Mobile Sidebar -->
+    <div
+      id="mobileMenu"
+      class="fixed h-screen inset-y-0 right-0 w-64 bg-white/5 backdrop-blur-xl border-l border-white/10 transform translate-x-full transition-transform duration-300 md:hidden"
+    >
+      <SideBarMobile />
+    </div>
+  </nav>
 
-    <script>
-        // Toggle Mobile Menu
-        const menuButton = document.getElementById("menuButton");
-        const closeButton = document.getElementById("closeMenu");
-        const mobileMenu = document.getElementById("mobileMenu");
+  <script>
+    // Toggle Mobile Menu
+    const menuButton = document.getElementById("menuButton");
+    const closeButton = document.getElementById("closeMenu");
+    const mobileMenu = document.getElementById("mobileMenu");
 
-        menuButton?.addEventListener("click", () => {
-            mobileMenu?.classList.toggle("translate-x-full");
-        });
+    menuButton?.addEventListener("click", () => {
+      mobileMenu?.classList.toggle("translate-x-full");
+    });
 
-        closeButton?.addEventListener("click", () => {
-            mobileMenu?.classList.add("translate-x-full");
-        });
+    closeButton?.addEventListener("click", () => {
+      mobileMenu?.classList.add("translate-x-full");
+    });
 
-        // Close menu when clicking outside
-        document.addEventListener("click", (e) => {
-            if (
-                !mobileMenu?.contains(e.target) &&
-                !menuButton?.contains(e.target)
-            ) {
-                mobileMenu?.classList.add("translate-x-full");
-            }
-        });
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!mobileMenu?.contains(e.target) && !menuButton?.contains(e.target)) {
+        mobileMenu?.classList.add("translate-x-full");
+      }
+    });
 
-        // Close menu after clicking a link
-        document.querySelectorAll(".mobile-nav-link").forEach((link) => {
-            link.addEventListener("click", () => {
-                mobileMenu?.classList.add("translate-x-full");
-            });
-        });
-    </script>
+    // Close menu after clicking a link
+    document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu?.classList.add("translate-x-full");
+      });
+    });
+  </script>
 </header>

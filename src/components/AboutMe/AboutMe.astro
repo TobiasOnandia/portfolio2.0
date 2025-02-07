@@ -1,15 +1,15 @@
 ---
-import Background from "./Background.astro";
-import Header from "./Header.astro";
-import ImgMe from "./ImgMe.astro";
+import Background from "@/components/AboutMe/Background.astro";
+import Header from "@/components/AboutMe/Header.astro";
+import ImgMe from "@/components/AboutMe/ImgMe.astro";
 ---
 
 <section id="about" class="relative py-20 overflow-hidden">
-    <div class="container mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
-            <Header />
-            <ImgMe />
-        </div>
+  <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
+      <Header />
+      <ImgMe />
     </div>
-    <Background />
+  </div>
+  <Background />
 </section>
