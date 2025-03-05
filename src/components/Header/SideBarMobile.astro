@@ -4,30 +4,35 @@ import SocialLinksHeader from "./SocialLinksHeader.astro";
 import NavLinksMobile from "./NavLinksMobile.astro";
 ---
 
-<aside class="flex flex-col h-full p-6">
-    <header class="flex justify-end mb-8">
-        <!-- Close Button -->
-        <button
+<aside 
+    id="mobileMenu"
+    popover
+    class="h-screen  w-64 bg-white/5 backdrop-blur-xl border-l border-white/10 duration-300 md:hidden  p-6">
+    <div class="flex flex-col h-full">
+        <header class="flex justify-end mb-8">
+            <!-- Close Button -->
+            <button
+            popoverTarget="mobileMenu"
             id="closeMenu"
             class="p-2 cursor-pointer rounded-lg hover:bg-white/10"
-        >
-            <svg
-                class="h-6 w-6 text-gray-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
             >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
+            <svg
+            class="h-6 w-6 text-gray-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            >
+            <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
         </button>
     </header>
-
     <!-- Navigation Links -->
     <NavLinksMobile />
     <!-- Social Links -->
     <SocialLinksHeader />
+    </div>
 </aside>
