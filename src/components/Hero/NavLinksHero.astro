@@ -1,0 +1,70 @@
+---
+import Laptop from "@/components/icons/Laptop.astro";
+import LinkedIn from "@/components/icons/LinkedIn.astro";
+import GitHub from "@/components/icons/GitHub.astro";
+import File from "@/components/icons/File.astro";
+---
+
+<nav class="flex flex-wrap gap-4 mt-8">
+  <a
+    href="#projects"
+    class="flex items-center gap-2 px-6 py-3 rounded-full
+                   bg-white/5 backdrop-blur-sm border border-white/10
+                   text-gray-300 hover:text-white hover:bg-white/10
+                   hover:border-indigo-400/30 transition-all
+                   duration-300 text-sm font-medium group"
+  >
+    <span
+      class="w-5 h-5 flex items-center group-hover:text-indigo-400 transition-colors"
+    >
+      <Laptop />
+    </span>
+    <span>Proyectos</span>
+  </a>
+  <a
+    href="https://www.linkedin.com/in/tobi-onandia-b89396252/"
+    class="flex items-center gap-2 px-6 py-3 rounded-full
+                   bg-white/5 backdrop-blur-sm border border-white/10
+                   text-gray-300 hover:text-white hover:bg-white/10
+                   hover:border-indigo-400/30 transition-all
+                   duration-300 text-sm font-medium group"
+  >
+    <span
+      class="w-5 h-5 flex items-center group-hover:text-indigo-400 transition-colors"
+    >
+      <LinkedIn />
+    </span>
+    <span>LinkedIn</span>
+  </a>
+  <a
+    href="https://github.com/TobiasOnandia"
+    class="flex items-center gap-2 px-6 py-3 rounded-full
+                   bg-white/5 backdrop-blur-sm border border-white/10
+                   text-gray-300 hover:text-white hover:bg-white/10
+                   hover:border-indigo-400/30 transition-all
+                   duration-300 text-sm font-medium group"
+  >
+    <span
+      class="w-5 h-5 flex items-center group-hover:text-indigo-400 transition-colors"
+    >
+      <GitHub />
+    </span>
+    <span>GitHub</span>
+  </a>
+  <a
+    href="./public/CV.pdf"
+    download
+    class="flex items-center gap-2 px-6 py-3 rounded-full
+                   bg-white/5 backdrop-blur-sm border border-white/10
+                   text-gray-300 hover:text-white hover:bg-white/10
+                   hover:border-indigo-400/30 transition-all
+                   duration-300 text-sm font-medium group"
+  >
+    <span
+      class="w-5 flex items-center h-5 group-hover:text-indigo-400 transition-colors"
+    >
+      <File />
+    </span>
+    <span>Descargar CV</span>
+  </a>
+</nav>

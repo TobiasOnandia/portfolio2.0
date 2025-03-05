@@ -6,7 +6,7 @@ export const projects = [
     image: "/agendatex.webp",
     demoLink: "https://agendatex.vercel.app/",
     codeLink: "https://github.com/TobiasOnandia/agendatex",
-    technologies: ["Next.js 14", "Supabase", "TypeScript", "Cron Jobs"]
+    technologies: ["Next.js 15", "Supabase", "TypeScript", "WhatsApp API", "Email Api"]
   },
   {
     title: "Duo Indumentaria",
@@ -15,7 +15,7 @@ export const projects = [
     image: "/duo.webp",
     demoLink: "https://duo-plum.vercel.app/",
     codeLink: "https://github.com/TobiasOnandia/duo",
-    technologies: ["Next.js 14", "PostgreSQL", "Mercado Pago", "Resend"]
+    technologies: ["Next.js 15", "Supabase", "Mercado Pago", "Email Api", "WhatsApp API", "Tailwind CSS", "TypeScript"]
   },
   {
     title: "Axis Team",
@@ -23,6 +23,6 @@ export const projects = [
     description: "Landing page corporativa con rendimiento optimizado y SEO avanzado",
     image: "/axis.webp",
     demoLink: "https://axis-six.vercel.app/",
-    technologies: ["Astro", "Tailwind CSS", "SSG", "Lighthouse 98"]
+    technologies: ["Astro", "Tailwind CSS", "TypeScript"]
   }
 ];

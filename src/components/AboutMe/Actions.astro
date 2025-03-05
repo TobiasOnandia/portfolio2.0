@@ -1,27 +1,27 @@
 ---
-import Phone from "../icons/Phone.astro";
-import Note from "../icons/Note.astro";
+import Phone from "@/components/icons/Phone.astro";
+import Note from "@/components/icons/Note.astro";
 ---
 
 <nav class="mt-6 flex flex-wrap gap-4" aria-label="Navegación principal">
-    <a
-        href="#contact"
-        class="flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-500/20 backdrop-blur-sm
+  <a
+    href="#contact"
+    class="flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-500/20 backdrop-blur-sm
                    border border-indigo-400/30 text-gray-300 hover:text-white hover:bg-indigo-500/30
                    hover:border-indigo-400/50 transition-all duration-300 text-sm font-medium"
-        aria-label="Ir a la sección de contacto"
-    >
-        <Phone aria-hidden="true" />
-        <span>Contactar Ahora</span>
-    </a>
-    <a
-        href="#projects"
-        class="flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-500/20 backdrop-blur-sm
+    aria-label="Ir a la sección de contacto"
+  >
+    <Phone aria-hidden="true" />
+    <span>Contactar Ahora</span>
+  </a>
+  <a
+    href="#projects"
+    class="flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-500/20 backdrop-blur-sm
                    border border-indigo-400/30 text-gray-300 hover:text-white hover:bg-indigo-500/30
                    hover:border-indigo-400/50 transition-all duration-300 text-sm font-medium"
-        aria-label="Ir a la sección de proyectos"
-    >
-        <Note aria-hidden="true" />
-        <span>Ver Proyectos</span>
-    </a>
+    aria-label="Ir a la sección de proyectos"
+  >
+    <Note aria-hidden="true" />
+    <span>Ver Proyectos</span>
+  </a>
 </nav>

@@ -1,29 +1,29 @@
 ---
-import Finish from "./Finish.astro";
-import Actions from "./Actions.astro";
+import Finish from "@/components/AboutMe/Finish.astro";
+import Actions from "@/components/AboutMe/Actions.astro";
 ---
 
 <header class="relative space-y-6 z-10">
-    <h2
-        class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent"
+  <h2
+    class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent"
+  >
+    Soluciones Técnicas,
+    <span
+      class="block text-2xl md:text-3xl font-semibold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent"
     >
-        Soluciones Técnicas,
-        <span
-            class="block text-2xl md:text-3xl font-semibold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent"
-        >
-            Resultados Tangibles
-        </span>
-    </h2>
+      Resultados Tangibles
+    </span>
+  </h2>
 
-    <section class="space-y-4 text-gray-300">
-        <p class="text-lg leading-relaxed">
-            Desarrollador Full Stack especializado en arquitecturas modernas con
-            <strong class="text-indigo-400 font-medium">Next.js</strong> y
-            <strong class="text-blue-400 font-medium">TypeScript</strong>.
-            Combino eficiencia técnica con diseño intuitivo para crear
-            aplicaciones escalables.
-        </p>
-        <Finish />
-        <Actions />
-    </section>
+  <section class="space-y-4 text-gray-300">
+    <p class="text-lg leading-relaxed">
+      Desarrollador Full Stack especializado en arquitecturas modernas con
+      <strong class="text-indigo-400 font-medium">Next.js</strong> y
+      <strong class="text-blue-400 font-medium">TypeScript</strong>. Combino
+      eficiencia técnica con diseño intuitivo para crear aplicaciones
+      escalables.
+    </p>
+    <Finish />
+    <Actions />
+  </section>
 </header>
