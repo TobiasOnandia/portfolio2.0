@@ -41,4 +41,21 @@ export const projects = [
     demoLink: "https://www.equipoaxis.com.ar",
     technologies: ["Astro", "Tailwind CSS", "TypeScript"],
   },
+  {
+    title: "Blog",
+    year: 2025,
+    description: "Blog personal con integración de Supabase, Prisma y tRPC",
+    image: "/blog.png",
+    demoLink: "https://blog-xi-ten-88.vercel.app",
+    codeLink: "https://github.com/TobiasOnandia/blog",
+    technologies: [
+      "Next.js 15",
+      "TypeScript",
+      "Tailwind CSS",
+      "Prisma",
+      "PostgreSQL",
+      "Supabase",
+      "tRPC",
+    ],
+  },
 ];
